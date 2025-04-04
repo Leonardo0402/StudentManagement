@@ -1,0 +1,24 @@
+# ninja log v5
+1	229	7653129251342289	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+21	230	7653129251362270	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+1	67	7653133213709507	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+5	74	7653133213784537	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+75	146	7653133214455702	StudentManagement.exe	d224fe8ca753407a
+2	68	7653133367540189	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+69	147	7653133368276076	StudentManagement.exe	d224fe8ca753407a
+0	3594	7654807088721349	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+1	71	7654808292179378	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+73	314	7654808294566671	StudentManagement.exe	d224fe8ca753407a
+2	68	7654809161264922	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+68	135	7654809161896824	StudentManagement.exe	d224fe8ca753407a
+1	246	7654810711181524	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+246	358	7654810712241993	StudentManagement.exe	d224fe8ca753407a
+1	67	7654810874632310	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+67	143	7654810875343484	StudentManagement.exe	d224fe8ca753407a
+2	91	7654813415729411	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+91	164	7654813416396418	StudentManagement.exe	d224fe8ca753407a
+1	72	7654814842941027	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+72	150	7654814843654268	StudentManagement.exe	d224fe8ca753407a
+1	234	7654857531669484	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+6	234	7654857531669484	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+235	348	7654857532749839	StudentManagement.exe	d224fe8ca753407a
