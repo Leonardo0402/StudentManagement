@@ -16,11 +16,11 @@ Student* createStudent(int id, const char* name, const char* gender, int age, fl
         exit(EXIT_FAILURE);
     }
     newStudent->id = id;
-    strncpy(newStudent->name, name, NAME_LEN);
-    strncpy(newStudent->gender, gender, sizeof(newStudent->gender));
+    snprintf(newStudent->name, NAME_LEN, "%s", name);
+    snprintf(newStudent->gender, sizeof(newStudent->gender), "%s", gender);
     newStudent->age = age;
     newStudent->score = score;
-    strncpy(newStudent->className, className, NAME_LEN);
+    snprintf(newStudent->className, NAME_LEN, "%s", className);
     newStudent->next = NULL;
     return newStudent;
 }
@@ -29,11 +29,11 @@ void printStudent(const Student* s)
 {
     if(!s)  return ;
     printf("学号：%d\n", s->id);
-    printf("姓名：%d\n", s->name);
-    printf("性别：%d\n", s->gender);
+    printf("姓名：%s\n", s->name);
+    printf("性别：%s\n", s->gender);
     printf("年龄：%d\n", s->age);
-    printf("成绩：%d\n", s->score);
-    printf("班级：%d\n", s->className);
+    printf("成绩：%.2f\n", s->score);
+    printf("班级：%s\n", s->className);
     printf("------------------------\n");
 }
 
@@ -91,7 +91,7 @@ void printAllStudents(const Student* head)
 
 void deleteStudentById(Student** head, int id)
 {
-    Student* curr = head;
+    Student* curr = *head;
     while(curr)
     {
         if(curr->id == id)
@@ -129,10 +129,10 @@ void modifyStudentById(Student* head, int id)
 }
 void searchStudentById(const Student* head, int id)
 {
-    Student* curr = head;
+    const Student* curr = head;
     while(curr)
     {
-        if(curr->id = id)
+        if(curr->id == id)
         {
             printStudent(curr);
             return ;

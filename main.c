@@ -5,18 +5,19 @@
 
 int main()
 {
+    system("chcp 65001");
     Student* head = NULL;
     int choice, id;
 
     while (1) {
-        printf("\n=== 学生管理系统 ===\n");
-        printf("1. 添加学生\n");
-        printf("2. 查看全部学生\n");
-        printf("3. 删除学生\n");
-        printf("4. 修改学生\n");
-        printf("5. 查询学生\n");
-        printf("0. 退出\n");
-        printf("请选择操作: ");
+        printf("\n=== 瀛︾敓绠＄悊绯荤粺 ===\n");
+        printf("1. 娣诲姞瀛︾敓\n");
+        printf("2. 鏌ョ湅鍏ㄩ儴瀛︾敓\n");
+        printf("3. 鍒犻櫎瀛︾敓\n");
+        printf("4. 淇敼瀛︾敓\n");
+        printf("5. 鏌ヨ瀛︾敓\n");
+        printf("0. 閫�鍑篭n");
+        printf("璇烽�夋嫨鎿嶄綔: ");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -27,25 +28,25 @@ int main()
                 printAllStudents(head);
                 break;
             case 3:
-                printf("输入要删除的学号: ");
+                printf("杈撳叆瑕佸垹闄ょ殑瀛﹀彿: ");
                 scanf("%d", &id);
                 deleteStudentById(&head, id);
                 break;
             case 4:
-                printf("输入要修改的学号: ");
+                printf("杈撳叆瑕佷慨鏀圭殑瀛﹀彿: ");
                 scanf("%d", &id);
                 modifyStudentById(head, id);
                 break;
             case 5:
-                printf("输入要查询的学号: ");
+                printf("杈撳叆瑕佹煡璇㈢殑瀛﹀彿: ");
                 scanf("%d", &id);
                 searchStudentById(head, id);
                 break;
             case 0:
-                printf("感谢使用，再见！\n");
+                printf("鎰熻阿浣跨敤锛屽啀瑙侊紒\n");
                 exit(0);
             default:
-                printf("无效选项，请重新输入。\n");
+                printf("鏃犳晥閫夐」锛岃閲嶆柊杈撳叆銆俓n");
         }
     }
     return 0;
