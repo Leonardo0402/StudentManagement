@@ -20,5 +20,13 @@ typedef struct Student {
 
 Student* createStudent(int id, const char* name, const char* gender, int age, float score, const char* className);
 void printStudent(const Student* s);
-
+void addStudent(Student** head );
+void printAllStudents(const Student* head);
+void showAllStudents();
+void deleteStudentById(Student** head, int id);
+void modifyStudentById(Student* head, int id);
+void searchStudentById(const Student* head, int id);
+void sortStudents();
+void saveToFile();
+void loadFromFile();
 #endif

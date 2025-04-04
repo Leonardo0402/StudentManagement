@@ -1,0 +1,8 @@
+# ninja log v5
+1	229	7653129251342289	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+21	230	7653129251362270	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+1	67	7653133213709507	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+5	74	7653133213784537	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+75	146	7653133214455702	StudentManagement.exe	d224fe8ca753407a
+2	68	7653133367540189	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+69	147	7653133368276076	StudentManagement.exe	d224fe8ca753407a
