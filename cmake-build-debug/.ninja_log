@@ -19,3 +19,6 @@
 91	164	7654813416396418	StudentManagement.exe	d224fe8ca753407a
 1	72	7654814842941027	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
 72	150	7654814843654268	StudentManagement.exe	d224fe8ca753407a
+1	234	7654857531669484	CMakeFiles/StudentManagement.dir/main.c.obj	62427123ca4d42ff
+6	234	7654857531669484	CMakeFiles/StudentManagement.dir/student.c.obj	ae3bf4b55102c934
+235	348	7654857532749839	StudentManagement.exe	d224fe8ca753407a

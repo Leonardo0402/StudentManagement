@@ -16,6 +16,7 @@ int main()
         printf("3. 删除学生\n");
         printf("4. 修改学生\n");
         printf("5. 查询学生\n");
+        printf("6. 保存数据到文件\n");
         printf("0. 退出\n");
         printf("请选择操作: ");
         scanf("%d", &choice);
@@ -41,6 +42,9 @@ int main()
                 printf("输入要查询的学号: ");
                 scanf("%d", &id);
                 searchStudentById(head, id);
+                break;
+            case 6:
+                saveToFile(head, "students.txt");
                 break;
             case 0:
                 printf("感谢使用，再见！\n");
