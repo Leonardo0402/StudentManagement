@@ -141,3 +141,45 @@ void searchStudentById(const Student* head, int id)
     }
     printf("未找到学号\n");
 }
+
+void saveToFile(const Student* head, const char* filename)
+{
+    FILE* fp = fopen(filename, "w");
+    if(!fp)
+    {
+        perror("文件打开失败");
+        return ;
+    }
+    const Student* curr = head;
+    while(curr)
+    {
+        fprintf(fp, "%d %s %s %d %.2f %s\n", curr->id, curr->name, curr->gender, curr->age, curr->score, curr->className);
+        curr = curr->next;
+    }
+    fclose(fp);
+    printf("数据已保存到文件 %s。\n", filename);
+}
+void loadFromFile(Student** head, const char* filename)
+{
+    FILE* fp = fopen(filename, "r");
+    if(!fp) return ;
+    int id, age;
+    float score;
+    char name[NAME_LEN], gender[10], className[NAME_LEN];
+    while(fscanf(fp, "%d %49s %9s %d %f %49s", &id, name, gender, &age, &score, className) == 6)
+    {
+        Student* newStudent = createStudent(id, name, gender, age, score, className);
+        if(*head == NULL)
+        {
+            *head = newStudent;
+        }
+        else
+        {
+            Student* temp = *head;
+            while(temp->next)   temp = temp->next;
+            temp->next = newStudent;
+        }
+    }
+    fclose(fp);
+    printf("数据已从文件 %s加载。\n", filename);
+}
