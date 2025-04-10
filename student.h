@@ -26,7 +26,8 @@ void showAllStudents();
 void deleteStudentById(Student** head, int id);
 void modifyStudentById(Student* head, int id);
 void searchStudentById(const Student* head, int id);
-void sortStudents();
+void sortStudentsByScore(Student** head);
 void saveToFile(const Student* head, const char* filename);
 void loadFromFile(Student** head, const char* filename);
+void searchStudentByName(const Student* head, const char* keyword);
 #endif

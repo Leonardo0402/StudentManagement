@@ -183,3 +183,44 @@ void loadFromFile(Student** head, const char* filename)
     fclose(fp);
     printf("数据已从文件 %s加载。\n", filename);
 }
+
+void sortStudentByScore(Student** head)
+{
+    if(!head || *head)  return ;
+    Student *i, *j;
+    for(i = *head; i != NULL; i++)
+    {
+        for(j = i->next; j != NULL; j = j->next)
+        {
+            if(j->score > i->score)
+            {
+                Student *temp = i;
+                *i = *j;
+                *j = *temp;
+                Student* tmpNext = i->next;
+                i->next = j->next;
+                j->next = tmpNext->next;
+            }
+        }
+    }
+    printf("已经按照成绩降序排列");
+}
+
+void searchStudentByName(const Student* head, const char* keyword)
+{
+    const Student* curr = head;
+    int found = 0;
+    while(curr)
+    {
+        if(strstr(curr->name, keyword))
+        {
+            printStudent(curr);
+            found = 1;
+        }
+        curr = curr->next;
+    }
+    if(found)
+    {
+        printf("未找到包含名字的关键字 \"s\"的姓名\n", keyword);
+    }
+}

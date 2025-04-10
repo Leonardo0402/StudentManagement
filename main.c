@@ -8,6 +8,7 @@ int main()
     system("chcp 65001");
     Student* head = NULL;
     int choice, id;
+    char keyword[NAME_LEN];
 
     while (1) {
         printf("\n=== 学生管理系统 ===\n");
@@ -17,6 +18,8 @@ int main()
         printf("4. 修改学生\n");
         printf("5. 查询学生\n");
         printf("6. 保存数据到文件\n");
+        printf("7. 成绩排序（降序）\n");
+        printf("8. 查询学生（姓名模糊）\n");
         printf("0. 退出\n");
         printf("请选择操作: ");
         scanf("%d", &choice);
@@ -45,6 +48,14 @@ int main()
                 break;
             case 6:
                 saveToFile(head, "students.txt");
+                break;
+            case 7:
+                sortStudentsByScore(&head);
+                break;
+            case 8:
+                printf("输入姓名关键字: ");
+                scanf("%s", keyword);
+                searchStudentByName(head, keyword);
                 break;
             case 0:
                 printf("感谢使用，再见！\n");
